@@ -15,7 +15,9 @@ const EditScreen = ({ navigation, route }) => {
                 onChangeText={onChangeText}
                 value={text} />
             <View style={styles.button}>
-                <Button title='Update'
+                <Button 
+                disabled={!text}
+                title='Update'
                     onPress={() => {
 
                         item.title = text

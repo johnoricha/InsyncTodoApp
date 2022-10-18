@@ -16,8 +16,11 @@ const TodoInput = ({ onAddTodoHandler }) => {
         <View style={styles.addTodoContainer}>
             <TextInput style={styles.input}
                 placeholder='What do you have planned?'
+                multiline={true}
                 onChangeText={(val) => { onInputChangeHandler(val) }} />
-            <AddTodo onAddTodoHandler={() => onAddTodoHandler(text)} />
+            <AddTodo
+            disabled={ !text }
+                onAddTodoHandler={() => onAddTodoHandler(text)} />
         </View>
     )
 }
@@ -25,7 +28,10 @@ const TodoInput = ({ onAddTodoHandler }) => {
 const styles = StyleSheet.create({
     input: {
         marginStart: 8,
-        marginEnd: 16
+        marginEnd: 16,
+        width: 250,
+        borderWidth: 1,
+        padding: 10
     },
     addTodoContainer: {
         padding: 8,

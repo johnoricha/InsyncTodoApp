@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
+        width:250,
         marginEnd: 20
     },
 

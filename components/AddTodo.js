@@ -1,10 +1,12 @@
-import { Text, Touchable, TouchableOpacity, View } from "react-native"
+import { Text, TouchableOpacity, View } from "react-native"
 
 
-const AddTodo = ({ onAddTodoHandler }) => {
+const AddTodo = ({ disabled, onAddTodoHandler }) => {
     return (
         <View>
-            <TouchableOpacity  onPress={onAddTodoHandler}>
+            <TouchableOpacity 
+            disabled={disabled}
+            onPress={onAddTodoHandler}>
                 <Text>
                     Add Todo
                 </Text>

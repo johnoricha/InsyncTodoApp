@@ -14,7 +14,6 @@ export default function TodoListHeader() {
 const styles = StyleSheet.create({
     text: {
         fontSize: 20,
-        marginTop: 50,
         textAlign: 'left',
         paddingStart: 8,
         color: 'grey'
